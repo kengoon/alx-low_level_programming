@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: print 2 different numbers 
+ * Description: print 2 different numbers
  * Return: Always 0 (Success)
  */
 int main(void)
