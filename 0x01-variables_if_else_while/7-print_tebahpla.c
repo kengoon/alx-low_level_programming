@@ -8,8 +8,8 @@ int main(void)
 {
 	int acii;
 
-	for (ascii = 122; ch >= 97; ch--)
-		putchar(ch);
+	for (ascii = 122; ascii >= 97; ascii--)
+		putchar(ascii);
 	putchar('\n');
 	return (0);
 }
