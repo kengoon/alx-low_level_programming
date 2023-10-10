@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int acii;
+	int ascii;
 
 	for (ascii = 122; ascii >= 97; ascii--)
 		putchar(ascii);
