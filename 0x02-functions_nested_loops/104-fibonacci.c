@@ -1,51 +1,45 @@
-#include "stdio.h"
-
+#include <stdio.h>
 /**
- * print_times_table - Prints a multiplication table up to param
- * @n: The number to be treated
- *
- * Return: Number matrix
- */
-void print_times_table(int n)
+  * main - print the first 98 fibonacci numbers.
+  * Return: Nothing.
+  */
+int main(void)
 {
-	int x, y, z;
+	int count;
+	unsigned long i, j, k;
+	unsigned long m, n, p, carry;
 
-	if (n >= 0 && n <= 14)
+	count = 0;
+	i = 0;
+	j = 1;
+	for (count = 1; count <= 91; count++)
 	{
-		for (x = 0; x <= n; x++)
-		{
-			for (y = 0; y <= n; y++)
-			{
-				z = x * y;
-				if (z > 99)
-				{
-					putchar(',');
-					putchar(32);
-					putchar((z / 100) + '0');
-					putchar(((z / 10) % 10) + '0');
-					putchar((z % 10) + '0');
-				}
-				else if (z > 9)
-				{
-					putchar(',');
-					putchar(32);
-					putchar(32);
-					putchar(((z / 10) % 10) + '0');
-					putchar((z % 10) + '0');
-				}
-				else
-				{
-					if (y != 0)
-					{
-						putchar(',');
-						putchar(32);
-						putchar(32);
-						putchar(32);
-					}
-					putchar(z + '0');
-				}
-			}
-			putchar('\n');
-		}
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu, ", k);
 	}
+	m = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+	while (count <= 98)
+	{
+		carry = (m + n) / 1000;
+		p = (m + n) - carry * 1000;
+		k = (i + j) + carry;
+		m = n;
+		n = p;
+		i = j;
+		j = k;
+		if (p >= 100)
+			printf("%lu%lu", k, p);
+		else
+			printf("%lu0%lu", k, p);
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	putchar('\n');
+	return (0);
 }
