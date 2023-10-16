@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stidio.h>
 /**
 * puts_half - print second half of a string
 * @str: char array string type
