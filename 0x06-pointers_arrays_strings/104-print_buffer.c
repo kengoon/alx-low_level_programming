@@ -32,7 +32,7 @@ void print_line(char *c, int s, int l)
 }
 
 /**
- * print_number - prints number
+ * print_buffer - prints buffer
  * @b: buffer to print
  * @size: size of buffer
  *
