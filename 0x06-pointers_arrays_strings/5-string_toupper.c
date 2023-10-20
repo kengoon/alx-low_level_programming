@@ -1,7 +1,7 @@
 /**
- * reverse_array - reverses an array of integers
- * @a: array to be reversed
- * @n: number of elements in the array
+ * string_toupper - converts all lowercase letters of a string to uppercase.
+ * @c: pointer to the string to convert
+ * Return: the converted string.
  */
 
 char *string_toupper(char *c)
