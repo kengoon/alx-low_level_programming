@@ -28,17 +28,17 @@ void print_line(char *c, int s, int l)
 			putchar(c[l * 10 + k]);
 		else
 			putchar('.');
-	}	
+	}
 }
 
 /**
- * print_buffer - prints a buffer
+ * print_number - prints number
  * @b: buffer to print
  * @size: size of buffer
  *
  * Return: void
  */
-void print_number(char *b, int size)
+void print_buffer(char *b, int size)
 {
 	int i;
 
