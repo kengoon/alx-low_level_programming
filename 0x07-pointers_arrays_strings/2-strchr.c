@@ -13,9 +13,9 @@ char *_strchr(char *s, char c)
 
 	while (s[m])
 		m++;
-	for (n = 0; n <= m; n++)
+	for (n = 0; n < m + 1; n++)
 	{
-		if (c = s[n])
+		if (c == s[n])
 		{
 			s += n;
 			return (s);
