@@ -8,8 +8,8 @@
 int __strlen(char *s)
 {
 	if (!*s)
-		return (0);	
-	return (1 + __strlen(s + 1);
+		return (0);
+	return (1 + __strlen(s + 1));
 }
 
 /**
