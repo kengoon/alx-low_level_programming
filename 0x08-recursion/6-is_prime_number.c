@@ -3,10 +3,10 @@
 /**
  * is_prime - detects if an input number is a prime number.
  * @n: input number.
- * @c: divisor.
+ * @d: divisor.
  * Return: 1 if n is a prime number. 0 if n is not a prime number.
  */
-int is_prime(unsigned int n, unsigned int d)i
+int is_prime(unsigned int n, unsigned int d)
 {
 	if (n % d == 0)
 		return (0);
