@@ -19,14 +19,14 @@ int __strlen(char *s)
  * @n2: biggest iterator.
  * Return: .
  */
-int __compare(char *s, int len, int index)
+int __compare(char *s, int n1, int n2)
 {
-	if (s[index] == s[len / 2])
-		return (1);
-
-	if (s[index] == s[len - index - 1])
-		return (__compare(s, len, index + 1));
-
+	if (*(s + n1) == *(s + n2))
+	{
+		if (n1 == n2 || n1 == n2 + 1)
+			return (1);
+		return (0 + __compare(s, n1 + 1, n2 - 1));
+	}
 	return (0);
 
 }
@@ -40,6 +40,6 @@ int is_palindrome(char *s)
 {
 	if (!*s)
 		return (1);
-	return (__compare(s, __strlen(s) - 1, 0));
+	return (__compare(s, 0, __strlen(s) - 1));
 }
 
