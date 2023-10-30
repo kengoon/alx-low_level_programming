@@ -6,7 +6,7 @@
 * @argv: an array of a command line listed
 * Return: 0 for success
 */
-int main(int argc, char *argv[])
+int main(int __attribute__((unused)) argc, char *argv[])
 {
 	int i = 0;
 
