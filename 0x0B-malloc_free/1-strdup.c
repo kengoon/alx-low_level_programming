@@ -12,12 +12,19 @@ char *_strdup(char *str)
         char *strout;
         unsigned int a, b;
 
-	for (a = 0; str[a]; a++)
-	strout = malloc(sizeof(char) * (a + 1));
-        if (!str || !strout)
+        if (!str)
                 return (NULL);
+
+        for (a = 0; str[a] != '\0'; a++)
+
+        strout = malloc(sizeof(char) * (a + 1));
+
+        if (!strout)
+                return (NULL);
+
         for (b = 0; b <= a; b++)
                 strout[b] = str[b];
+
         return (strout);
 }
 
