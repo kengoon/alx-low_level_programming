@@ -1,29 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * main - multiplies two positive numbers
- * @argc: argument count
- * @argv: argument vectors
- * Return: 0
- */
-int main(int argc, char *argv[])
-{
-	char *f = argv[1];
-	char *s = argv[2];
-
-	if (argc != 3 || !onlyNumbers(f) || !onlyNumbers(s))
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	if (*f == 48 || *s == 48)
-		printf("0\n");
-	else
-		multiply(s, f);
-	return (0);
-}
-
+#include <string.h>
 /**
  * multiply - multiplies two numbers and displays it
  * @f: first "number"
@@ -34,8 +12,8 @@ void multiply(char *f, char *s)
 	int i, len1, len2, total, fdigit, sdigit, res = 0, tmp;
 	int *ptr;
 
-	len1 = _strlen(f);
-	len2 = _strlen(s);
+	len1 = strlen(f);
+	len2 = strlen(s);
 	tmp = len2;
 	total = len1 + len2;
 	ptr = _calloc(sizeof(int), (len1 + len2));
@@ -126,4 +104,26 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	_memset(ptr, 0, size * nmemb);
 	return (ptr);
+}
+/**
+ * main - multiplies two positive numbers
+ * @argc: argument count
+ * @argv: argument vectors
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	char *f = argv[1];
+	char *s = argv[2];
+
+	if (argc != 3 || !onlyNumbers(f) || !onlyNumbers(s))
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	if (*f == 48 || *s == 48)
+		printf("0\n");
+	else
+		multiply(s, f);
+	return (0);
 }
