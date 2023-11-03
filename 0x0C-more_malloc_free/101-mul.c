@@ -8,7 +8,7 @@
  * @str: input string
  * Return: 0 if false, 1 if true
  */
-int isNumeric(const char* str)
+int isNumeric(char *str)
 {
 	while (*str)
 	{
