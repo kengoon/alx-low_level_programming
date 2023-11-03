@@ -8,14 +8,15 @@
  * @str: input string
  * Return: 0 if false, 1 if true
  */
-int isNumeric(const char* str) {
-    while (*str) {
-        if (!isdigit(*str)) {
-            return 0; // Not a digit
-        }
-        str++;
-    }
-    return 1; // Entire string is composed of digits
+int isNumeric(const char* str)
+{
+	while (*str)
+	{
+		if (!isdigit(*str))
+			return (0);
+		str++;
+	}
+	return (1);
 }
 
 /**
