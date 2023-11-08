@@ -31,7 +31,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*op == '/' ||*op == '%') && !num2)
+	if ((*op == '/' || *op == '%') && !num2)
 	{
 		printf(error_);
 		exit(100);
