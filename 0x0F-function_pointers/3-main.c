@@ -13,11 +13,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2;
 	char *op;
-	char error_[] = "Error\n";
 
 	if (argc != 4)
 	{
-		printf(error_);
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -27,13 +26,13 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	if (!get_op_func(op) || op[1] != '\0')
 	{
-		printf(error_);
+		printf("Error\n");
 		exit(99);
 	}
 
 	if ((*op == '/' || *op == '%') && !num2)
 	{
-		printf(error_);
+		printf("Error\n");
 		exit(100);
 	}
 
