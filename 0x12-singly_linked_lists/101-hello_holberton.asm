@@ -1,19 +1,19 @@
 section .data
     hello db 'Hello, Holberton', 0
+    format db '%s', 0xA, 0
 
 section .text
-    global _start
+    extern printf
+
+global _start
 
 _start:
-    ; write Hello, Holberton to stdout
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, hello
-    mov rdx, 16
-    syscall
+    push hello
+    push format
+    call printf
 
     ; exit
-    mov rax, 60
-    xor rdi, rdi
+    mov rax, 60         ; syscall number for exit
+    xor rdi, rdi        ; exit code 0
     syscall
 
