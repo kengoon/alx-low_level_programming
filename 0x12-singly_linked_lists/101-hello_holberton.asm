@@ -1,19 +1,15 @@
-section .data
-    hello db 'Hello, Holberton', 0
-    format db '%s', 0xA, 0
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
-    extern printf
+	SECTION .text
+	extern printf
+	global main
+main:
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-global _start
-
-_start:
-    push hello
-    push format
-    call printf
-
-    ; exit
-    mov rax, 60         ; syscall number for exit
-    xor rdi, rdi        ; exit code 0
-    syscall
-
+	mov eax, 0
+	ret
